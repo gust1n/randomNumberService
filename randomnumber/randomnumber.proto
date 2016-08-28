@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service RandomNumber {
+	rpc GetInt(GetIntRequest) returns (GetIntResponse) {}
+}
+
+message GetIntRequest {
+	int32 min = 1;
+	int32 max = 2;
+}
+
+message GetIntResponse {
+	int32 randomInt = 1;
+}
